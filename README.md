@@ -1,1 +1,2 @@
 # http_status_codes
+直接APサーバにつないでも良いが、gunicornのwsgiサーバでありwebサーバではないので遅買ったりする。

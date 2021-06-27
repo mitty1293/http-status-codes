@@ -8,7 +8,7 @@ services:
         container_name: flask_http_status_codes
         volumes: 
             - ./flask/app:/usr/src/app
-        # ホストのポート8004とつばぐ必要はない。8000がコンテナネットワーク内で見えるようにbindさえすればよいのでports行は消す。
+        # ホストのポート8004とつなぐ必要はない。8000がコンテナネットワーク内で見えるようにbindさえすればよいのでports行は消す。
         ports: 
             - "8004:8000"
         networks: 
@@ -20,6 +20,8 @@ services:
             context: ./nginx
             dockerfile: Dockerfile
         container_name: nginx_http_status_codes
+        #ports: 
+        #    - "xxxx:xxxx"
         networks: 
             - net_http_status_codes
 networks: 

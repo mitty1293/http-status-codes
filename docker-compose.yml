@@ -12,8 +12,7 @@ services:
             - "8004:8000"
         networks: 
             - net_http_status_codes
-        tty: true
-        command: bash -c 'gunicorn -w 2 -b 0.0.0.0:8000 app:app'
+        command: /usr/local/bin/gunicorn -w 2 -b 0.0.0.0:8000 app:app
     nginx:
         image: nginx_http_status_codes
         build: 

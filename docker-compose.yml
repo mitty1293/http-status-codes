@@ -2,7 +2,9 @@ version: "3"
 services: 
     flask:
         image: flask_http_status_codes
-        build: ./flask
+        build: 
+            context: ./flask
+            dockerfile: Dockerfile
         container_name: flask_http_status_codes
         volumes: 
             - ./flask/app:/usr/src/app
@@ -10,7 +12,9 @@ services:
             - net_http_status_codes
     nginx:
         image: nginx_http_status_codes
-        build: ./nginx
+        build: 
+            context: ./nginx
+            dockerfile: Dockerfile
         container_name: nginx_http_status_codes
         networks: 
             - net_http_status_codes

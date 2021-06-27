@@ -8,6 +8,7 @@ services:
         container_name: flask_http_status_codes
         volumes: 
             - ./flask/app:/usr/src/app
+        # ホストのポート8004とつばぐ必要はない。8000がコンテナネットワーク内で見えるようにbindさえすればよいのでports行は消す。
         ports: 
             - "8004:8000"
         networks: 

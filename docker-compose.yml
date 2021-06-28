@@ -8,11 +8,9 @@ services:
         container_name: flask_http_status_codes
         volumes: 
             - ./flask/app:/usr/src/app
-        # ホストのポート8084とつなぐ必要はない。8000がコンテナネットワーク内で見えるようにbindさえすればよいのでports行は消す。
-        ports: 
-            - "8084:8000"
         networks: 
             - net_http_status_codes
+        # Flaskアプリの接続先を自身の8000ポートとする
         command: /usr/local/bin/gunicorn -w 2 -b 0.0.0.0:8000 app:app
     nginx:
         image: nginx_http_status_codes

@@ -8,8 +8,10 @@
 4. flaskコンテナ:8000 -> flaskアプリappへ接続
     * ref. docker-compose.yml/flask/command
 ## Reference
+### Docker, Nginx, Gunicorn, Flask
 * https://qiita.com/mintak21/items/eeba4654a0db21abcb1c
 * https://qiita.com/mintak21/items/d956389ee9338e6c0fe0
 * https://docs.gunicorn.org/en/latest/settings.html
+### HTTP Status Code
 ## Note
 * 直接APサーバにつないでも良いがgunicornはwsgiサーバでありwebサーバではないので遅い。

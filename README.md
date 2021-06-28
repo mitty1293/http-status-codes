@@ -13,5 +13,7 @@
 * https://qiita.com/mintak21/items/d956389ee9338e6c0fe0
 * https://docs.gunicorn.org/en/latest/settings.html
 ### HTTP Status Code
+* http://ozuma.sakura.ne.jp/httpstatus/
+* https://qiita.com/mink0212/items/52e0ebd66bd94e1303c1
 ## Note
 * 直接APサーバにつないでも良いがgunicornはwsgiサーバでありwebサーバではないので遅い。

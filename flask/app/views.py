@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template
+from flask import render_template, Response
 
 @app.route('/')
 def index():
@@ -7,7 +7,7 @@ def index():
 
 @app.route('/<int:status_cd>')
 def return_status_code(status_cd):
-    pass
+    return Response(status=500)
 
 # 接続テスト用
 @app.route('/test')

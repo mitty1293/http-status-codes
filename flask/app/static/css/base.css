@@ -1,4 +1,6 @@
 h2{
-    color: white;
-    background-color: purple;
+    color: purple;
+    /* background-color: purple; */
+    border-top: purple;
+    border-bottom: purple;
 }

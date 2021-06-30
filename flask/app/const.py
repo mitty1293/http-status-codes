@@ -1,8 +1,8 @@
 from types import MappingProxyType
 
-class HTTPStatus():
+class HTTPStatusCode():
     def __init__(self):
-            self.status_dict = MappingProxyType({
+            self.status_line = MappingProxyType({
                 200:"OK",
                 403:"Forbidden",
                 404:"Not Found",

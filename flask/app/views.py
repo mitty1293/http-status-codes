@@ -1,20 +1,8 @@
 from app import app
 from flask import render_template, Response
-#from const import HTTPStatusCode
-# -------------------------------
-from types import MappingProxyType
+from . import const
 
-class HTTPStatusCode():
-    def __init__(self):
-            self.status_line = MappingProxyType({
-                200:"OK",
-                403:"Forbidden",
-                404:"Not Found",
-                500:"Internal Server Error"
-            })
-#--------------------------------
-
-responce = HTTPStatusCode()
+responce = const.HTTPStatusCode()
 
 @app.route('/')
 def index():

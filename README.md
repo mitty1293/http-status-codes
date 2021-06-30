@@ -13,8 +13,10 @@
 * https://qiita.com/mintak21/items/d956389ee9338e6c0fe0
 * https://docs.gunicorn.org/en/latest/settings.html
 ### HTTP Status Code
+* [RFC7231 Section-6](https://datatracker.ietf.org/doc/html/rfc7231#section-6)
 * http://ozuma.sakura.ne.jp/httpstatus/
 * https://qiita.com/mink0212/items/52e0ebd66bd94e1303c1
+* https://qiita.com/unsoluble_sugar/items/b080a16701946fcfce70
 ### Dictionary
 * [不変な辞書を作成する](https://zenn.dev/sasano8/articles/python-006-dictionary#%E4%B8%8D%E5%A4%89%E3%81%AA%E8%BE%9E%E6%9B%B8%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
 ## Note

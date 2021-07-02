@@ -1,6 +1,30 @@
+body { 
+    margin: 2%;
+}
+
+h1{
+    color: white;
+    background-color: purple;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    margin-top: 1.5rem;
+}
+
 h2{
-    color: purple;
-    /* background-color: purple; */
-    border-top: purple;
-    border-bottom: purple;
+    border-top: 6px double purple;
+    border-bottom: 6px double purple;
+    padding-left: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+p{
+    margin: 0.5rem;
+}
+
+pre{
+    color: white;
+    background: black;
+    padding: 1rem;
+    margin: 1rem;
+    white-space: pre-line;
 }

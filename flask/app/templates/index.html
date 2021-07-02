@@ -8,12 +8,41 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <!-- Optional CSS -->
-        <link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}">
+        <link rel="stylesheet" href="base.css">
 
         <title>Return HTTP Status Code</title>
     </head>
     <body>
-        <h2 class="display-1">Return HTTP Status Code</h2>
+        <h1>Return HTTP Status Code</h1>
+        <p>求めるHTTPステータスコードを返してくれます。</p>
+        <h2>Usage</h2>
+        <p><code>[http_status_code]</code>に任意のステータスコードを入力して以下にアクセスしてください。</p>
+        <pre>http://160.16.200.37:8004/[http_status_code]</pre>
+        <p>例えば <code>http://160.16.200.37:8004/500</code> にアクセスすると <code>500 Internal Server Error</code> をヘッダーとしたレスポンスを返します。</p>
+        <pre>
+            HTTP/1.1 500 INTERNAL SERVER ERROR
+            Server: nginx/1.20.1
+            Date: Fri, 02 Jul 2021 06:39:04 GMT
+            Content-Type: text/html; charset=utf-8
+            Content-Length: 0
+            Connection: keep-alive
+        </pre>
+        <p>Code List に記載のないステータスコードを指定した場合、 <code>404 Not Found </code>を返します。</p>
+        <h2>Code List</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Status Code</th>
+                    <th>Reason-Phrase</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>aaa</th>
+                    <td>bbb</td>
+                </tr>
+            </tbody>
+        </table>
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     </body>

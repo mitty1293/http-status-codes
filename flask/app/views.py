@@ -6,7 +6,7 @@ responce = const.HTTPStatusCode()
 
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", status_line=responce.status_line)
 
 @app.route('/<int:status_cd>')
 def return_status_code(status_cd):

@@ -37,10 +37,12 @@
                 </tr>
             </thead>
             <tbody>
+                {% for key, value in status_line %}
                 <tr>
-                    <th>aaa</th>
-                    <td>bbb</td>
+                    <th>{{key}}</th>
+                    <td>{{value}}</td>
                 </tr>
+                {% endfor %}
             </tbody>
         </table>
         <!-- Bootstrap Bundle with Popper -->

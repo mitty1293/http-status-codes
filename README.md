@@ -1,4 +1,5 @@
 # http_status_codes
+API to return HTTP status code 
 ## 接続の流れ
 1. ホストサーバー:8004/へ外部からアクセス
 2. ホストサーバー:8004/ -> nginxコンテナ:80/ へマッピング

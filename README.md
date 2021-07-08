@@ -52,6 +52,7 @@ Connection: keep-alive
 * Flask : pythonフレームワーク。サーバ機能はあるけど、性能や安定性やセキュリティは考慮されていない。あくまで開発用。
 * gunicorn : APサーバ
 * Nginx : webサーバ（ここではプロキシサーバ）
+
 これらは以下の理由で用いている。
 * Flaskのサーバ機能は開発用なので使わない。
 * よって、WSGIをサポートするwebサーバであるgunicornをAPサーバとする。

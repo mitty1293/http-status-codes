@@ -47,4 +47,4 @@ Connection: keep-alive
 ### Dictionary
 * [不変な辞書を作成する](https://zenn.dev/sasano8/articles/python-006-dictionary#%E4%B8%8D%E5%A4%89%E3%81%AA%E8%BE%9E%E6%9B%B8%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
 ## Note
-* 直接gunicornで立てたwebサーバにつないでも良いが、gunicornはnginxより遅いかも。
+* 直接gunicornで立てたAPサーバ（gunicornはwebサーバではある）につないでも良いが、gunicornはあくまでwsgiサーバとして建てたのでnginxより遅いかも。

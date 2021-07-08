@@ -1,4 +1,4 @@
-# http_status_codes
+# http-status-codes
 API to return HTTP status code 
 ## 接続の流れ
 1. ホストサーバー:8004/へ外部からアクセス

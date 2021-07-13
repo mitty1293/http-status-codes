@@ -1,29 +1,29 @@
 version: "3"
 services: 
     flask:
-        image: flask_http_status_codes
+        image: flask_return_http_status_code
         build: 
             context: ./flask
             dockerfile: Dockerfile
-        container_name: flask_http_status_codes
+        container_name: flask_return_http_status_code
         volumes: 
             - ./flask/app:/usr/src/app
         networks: 
-            - net_http_status_codes
+            - net_return_http_status_code
         # -w 2 -> リクエストをさばくWorkerプロセスの数
         # -b 0.0.0.0:8000 app:app -> appを自身の8000ポートと結合する（Flaskアプリへの接続先を設定する）
         # DockerfileのWORKDIRで/usr/srcに移動。そのままappと同階層でgunicornを起動するため詳細なappの場所は指定不要
         command: /usr/local/bin/gunicorn -w 2 -b 0.0.0.0:8000 app:app --reload
     nginx:
-        image: nginx_http_status_codes
+        image: nginx_return_http_status_code
         build: 
             context: ./nginx
             dockerfile: Dockerfile
-        container_name: nginx_http_status_codes
+        container_name: nginx_return_http_status_code
         ports: 
             - "8004:80"
         networks: 
-            - net_http_status_codes
+            - net_return_http_status_code
 networks: 
-    net_http_status_codes:
+    net_return_http_status_code:
         driver: bridge

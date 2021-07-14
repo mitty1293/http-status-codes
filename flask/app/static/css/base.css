@@ -3,6 +3,10 @@ body {
     font-family: "Raleway","Aria","Yu Gothic",sans-serif;
 }
 
+.container{
+    width: 1000px;
+}
+
 pre{
     color: white;
     background: black;

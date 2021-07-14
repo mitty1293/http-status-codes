@@ -1,19 +1,16 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
 body { 
-    margin: 2%;
+    margin-top: 2%;
     font-family: "Raleway","Aria","Yu Gothic",sans-serif;
 }
-
-.container{
-    width: 1000px;
-}
-
 pre{
     color: white;
     background: black;
     padding: 1rem;
     white-space: pre-line;
 }
-
 table{
     font-family: SFMono-Regular,Menlo,Monaco,Consolas;
 }

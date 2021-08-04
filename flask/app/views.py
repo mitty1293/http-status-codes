@@ -12,8 +12,7 @@ def index():
 def return_status_code(status_cd):
     if status_cd in responce.status_line.keys():
         return Response(status=status_cd)
-    else:
-        return Response(status=404)
+    return Response(status=404)
 
 # connection test
 @app.route('/test')

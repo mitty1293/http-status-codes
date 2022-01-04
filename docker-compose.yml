@@ -9,7 +9,7 @@ services:
         volumes: 
             - ./flask/app:/usr/src/app
         networks: 
-            - net_return_http_status_code
+            - internal
         # -w 2 -> リクエストをさばくWorkerプロセスの数
         # -b 0.0.0.0:8000 app:app -> appを自身の8000ポートと結合する（Flaskアプリへの接続先を設定する）
         # DockerfileのWORKDIRで/usr/srcに移動。そのままappと同階層でgunicornを起動するため詳細なappの場所は指定不要
@@ -21,9 +21,9 @@ services:
             dockerfile: Dockerfile
         container_name: nginx_return_http_status_code
         ports: 
-            - "8004:80"
+            - "${NGINX_PORT}:80"
         networks: 
-            - net_return_http_status_code
+            - internal
 networks: 
-    net_return_http_status_code:
+    internal:
         driver: bridge

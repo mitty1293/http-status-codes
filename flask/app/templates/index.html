@@ -53,10 +53,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for key in status_line %}
+                            {% for line in status_lines %}
                             <tr>
-                                <th>{{key}}</th>
-                                <td>{{status_line[key]}}</td>
+                                <th>{{line.value}}</th>
+                                <td>{{line.name}}</td>
                             </tr>
                             {% endfor %}
                         </tbody>

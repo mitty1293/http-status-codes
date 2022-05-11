@@ -1,10 +1,21 @@
 from http import HTTPStatus
+from logging import basicConfig
 
 from flask import Flask, Response, render_template
 
+# Configure logging
+# If FLASK_ENV=production, then level=WARNING
+# If FLASK_ENV=development, then level=DEBUG
+basicConfig(
+    filename="/app/logs/returnhttpstatuscode.log",
+    format="%(asctime)s\t%(levelname)s\t%(filename)s\t%(module)s\tline:%(lineno)d\t%(message)s",
+)
+
+# Create an instance of the Flask application
 app = Flask(__name__)
 
 
+# Routing
 @app.route("/")
 def index():
     return render_template("index.html", status_lines=HTTPStatus)
@@ -15,9 +26,3 @@ def return_status_code(status_cd):
     if status_cd in [e.value for e in HTTPStatus]:
         return Response(status=status_cd)
     return Response(status=404)
-
-
-# connection test
-@app.route("/test")
-def test():
-    return "test OK."

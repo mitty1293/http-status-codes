@@ -4,8 +4,6 @@ from logging import basicConfig
 from flask import Flask, Response, render_template
 
 # Configure logging
-# If FLASK_ENV=production, then level=WARNING
-# If FLASK_ENV=development, then level=DEBUG
 basicConfig(
     filename="/app/logs/returnhttpstatuscode.log",
     format="%(asctime)s\t%(levelname)s\t%(filename)s\t%(module)s\tline:%(lineno)d\t%(message)s",

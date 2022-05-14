@@ -25,7 +25,6 @@ def index():
 def return_status_code(status_cd):
     if status_cd in [e.value for e in HTTPStatus]:
         return Response(
-            response=f"{HTTPStatus(status_cd).value} {HTTPStatus(status_cd).phrase}",
-            status=status_cd,
+            response=f"{status_cd} {HTTPStatus(status_cd).phrase}", status=status_cd
         )
     return Response(response=f"{status_cd} UNKNOWN", status=status_cd)

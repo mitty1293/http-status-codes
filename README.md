@@ -31,3 +31,4 @@ Connection: keep-alive
 ```
 ## References
 * https://httpstat.us/
+* https://kamatimaru.hatenablog.com/entry/2021/07/05/231655

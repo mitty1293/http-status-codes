@@ -26,4 +26,4 @@ def return_status_code(status_cd):
             response=f"{HTTPStatus(status_cd).value} {HTTPStatus(status_cd).phrase}",
             status=status_cd,
         )
-    return Response(response=f"{status_cd} Non-standard Code", status=status_cd)
+    return Response(response=f"{status_cd} Unknown", status=status_cd)

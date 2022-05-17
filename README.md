@@ -29,3 +29,6 @@ Content-Type: text/html; charset=utf-8
 Content-Length: 0
 Connection: keep-alive
 ```
+## References
+* https://httpstat.us/
+* https://kamatimaru.hatenablog.com/entry/2021/07/05/231655

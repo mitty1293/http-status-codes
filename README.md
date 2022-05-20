@@ -26,7 +26,7 @@ Content-Type: text/html; charset=utf-8
 Content-Length: 11
 Connection: keep-alive
 ```
-## Self-Hosting
+## Self hosting
 ### Production Environment
 ```
 docker-compose -f docker-compose.prod.yml up -d

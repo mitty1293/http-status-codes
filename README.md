@@ -27,15 +27,20 @@ Content-Length: 11
 Connection: keep-alive
 ```
 ## Self-Hosting
-Start the container
+### Production Environment
 ```
-# Production Environment
 docker-compose -f docker-compose.prod.yml up -d
-
-# Development Environment
+```
+Go to `http://host-ip:8000/[http_status_code]`, you will get a response containing the code you specified.  
+If you want to change the port number, change the environment variable `GUNICORN_PORT` in Dockerfile.
+### Development Environment
+```
 docker-compose -f docker-compose.dev.yml up -d
 ```
-And access the following URL.
+Go to `http://host-ip:5000/[http_status_code]`.
+If you want to change the port number, change the environment variable `FLASK_RUN_PORT` in Dockerfile.
+### initial
 ```
-http://host-ip:8000/[http_status_code]
+docker-compose -f docker-compose.init.yml up -d
 ```
+This is a dedicated environment for executing `poetry init`.

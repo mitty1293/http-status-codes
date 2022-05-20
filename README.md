@@ -17,6 +17,14 @@ Date: Tue, 13 Jul 2021 15:16:34 GMT
 Content-Type: text/html; charset=utf-8
 Content-Length: 0
 Connection: keep-alive
+
+$ curl -I http://returncode.fmitty.net/299
+HTTP/1.1 299 UNKNOWN
+Server: nginx/1.20.1
+Date: Fri, 20 May 2022 13:14:42 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 11
+Connection: keep-alive
 ```
 ## Self-Hosting
 Start the container

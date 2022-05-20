@@ -6,6 +6,7 @@ Then you will get a response containing the code you specified.
 ```
 http://returncode.fmitty.net/[http_status_code]
 ```
+
 If a status code that is not listed in the [class http.HTTPStatus](https://docs.python.org/3/library/http.html#http-status-codes) is specified, `Unknown` will be returned.
 ## Example
 ```Shell

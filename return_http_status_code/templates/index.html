@@ -36,11 +36,11 @@
                 <p>求めるHTTPステータスコードを返してくれます。</p>
                 <h2>Usage</h2>
                 <p><code>[http_status_code]</code>に任意のステータスコードを入力して以下にアクセスしてください。</p>
-                <pre>http://returncode.fmitty.net/[http_status_code]</pre>
-                <p>例えば <code>http://returncode.fmitty.net/500</code> は <code>500 Internal Server Error</code> を返します。</p>
+                <pre>https://returncode.fmitty.net/[http_status_code]</pre>
+                <p>例えば <code>https://returncode.fmitty.net/500</code> は <code>500 Internal Server Error</code> を返します。</p>
                 <p>Code List に記載のないステータスコードを指定した場合、 <code>Unknown</code>を返します。</p>
                 <pre>
-                        $ curl -I http://returncode.fmitty.net/500
+                        $ curl -I https://returncode.fmitty.net/500
                         HTTP/1.1 500 INTERNAL SERVER ERROR
                         Server: nginx/1.20.1
                         Date: Tue, 13 Jul 2021 15:16:34 GMT
@@ -48,7 +48,7 @@
                         Content-Length: 0
                         Connection: keep-alive
 
-                        $ curl -I http://returncode.fmitty.net/299
+                        $ curl -I https://returncode.fmitty.net/299
                         HTTP/1.1 299 UNKNOWN
                         Server: nginx/1.20.1
                         Date: Fri, 20 May 2022 13:14:42 GMT

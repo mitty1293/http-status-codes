@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+    app:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+            target: production
+        image: return_http_status_code_prod
+        container_name: return_http_status_code_prod
+        volumes:
+            - ./logs:/app/logs
+        tty: true
+        networks:
+            - traefik_reverse_proxy_network
+        labels:
+            - traefik.enable=true
+            - traefik.http.routers.return_http_status_code.entrypoints=websecure
+            - traefik.http.routers.return_http_status_code.rule=Host(`returncode.${DOMAIN}`)
+            - traefik.http.routers.return_http_status_code.tls.certresolver=myresolver
+            - traefik.http.services.return_http_status_code.loadbalancer.server.port=8000
+networks:
+    traefik_reverse_proxy_network:
+        external: true

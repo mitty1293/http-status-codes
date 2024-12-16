@@ -14,7 +14,13 @@ requires-python = ">= 3.8"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+virtual = true
+dev-dependencies = [
+    "pytest>=8.3.4",
+]
+
+[tool.rye.scripts]
+devserver = { cmd = "flask --app src.return_http_status_code.application:app run", env-file = ".env" }
 
 [tool.ruff]
 line-length = 119

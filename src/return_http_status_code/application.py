@@ -5,7 +5,7 @@ from flask import Flask, Response, render_template
 
 # Configure logging
 basicConfig(
-    filename="/app/logs/returnhttpstatuscode.log",
+    filename="./logs/return_http_status_code.log",
     format="%(asctime)s\t%(levelname)s\t%(filename)s\t%(module)s\tline:%(lineno)d\t%(message)s",
 )
 

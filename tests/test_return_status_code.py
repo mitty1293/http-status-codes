@@ -1,7 +1,7 @@
 from http import HTTPStatus
 
 import pytest
-from return_http_status_code.application import app
+from src.return_http_status_code.application import app
 
 valid_httpstatus = [e.value for e in HTTPStatus]
 invalid_httpstatus = list(set([i for i in range(100, 600)]) - set(valid_httpstatus))

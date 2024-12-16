@@ -9,15 +9,14 @@
 #   generate-hashes: false
 #   universal: false
 
--e file:.
 blinker==1.9.0
     # via flask
 click==8.1.7
     # via flask
 flask==3.1.0
-    # via return-http-status-code
 gunicorn==23.0.0
-    # via return-http-status-code
+iniconfig==2.0.0
+    # via pytest
 itsdangerous==2.2.0
     # via flask
 jinja2==3.1.4
@@ -27,5 +26,9 @@ markupsafe==3.0.2
     # via werkzeug
 packaging==24.2
     # via gunicorn
+    # via pytest
+pluggy==1.5.0
+    # via pytest
+pytest==8.3.4
 werkzeug==3.1.3
     # via flask

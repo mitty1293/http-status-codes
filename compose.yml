@@ -1,0 +1,12 @@
+services:
+    app:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: return_http_status_code
+        container_name: return_http_status_code
+        ports:
+            - "8000:8000"
+        volumes:
+            - ./logs:/opt/logs
+        tty: true

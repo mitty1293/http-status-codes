@@ -28,36 +28,35 @@ Connection: keep-alive
 ```
 ## Self hosting
 ### Production Environment(via traefik)
-Replace the value of DOMAIN with the domain.
+Check the value of the HOST_DOMAIN environment variable for the host.
 ```
-# Copy .env_example as .env
-cp .env_example .env
-vi .env
-```
-```
-# Replace the value of DOMAIN in .env
-DOMAIN=example.com
+printenv HOST_DOMAIN
 ```
 Start the container.
 ```
 docker network create traefik_reverse_proxy_network
-docker compose -f docker-compose.traefik.yml up -d
+docker compose -f compose.traefik.yml up -d
 ```
-Go to `https://returncode.${DOMAIN}/[http_status_code]`, you will get a response containing the code you specified.  
+Go to `https://returncode.${HOST_DOMAIN}/[http_status_code]`, you will get a response containing the code you specified.  
+
+If you want to enable debug mode, change the environment variable `FLASK_DEBUG` in Dockerfile.
 ### Production Environment(Standalone)
+Start the container.
 ```
-docker compose -f docker-compose.prod.yml up -d
+docker compose -f compose.yml up -d
 ```
 Go to `http://host-ip:8000/[http_status_code]`, you will get a response containing the code you specified.  
-If you want to change the port number, change the environment variable `GUNICORN_PORT` in Dockerfile and `ports` in docker-compose file.
+
+If you want to enable debug mode, change the environment variable `FLASK_DEBUG` in Dockerfile.  
+If you want to change the port number, change the value in Dockerfile and compose file.
 ### Development Environment
+Start the development server.
 ```
-docker compose -f docker-compose.dev.yml up -d
+rye run devserver
 ```
 Go to `http://host-ip:5000/[http_status_code]`.
-If you want to change the port number, change the environment variable `FLASK_RUN_PORT` in Dockerfile and `ports` in docker-compose file.
-### initial
+
+## Test
 ```
-docker compose -f docker-compose.init.yml up -d
+rye test
 ```
-This is a dedicated environment for executing `poetry init`.

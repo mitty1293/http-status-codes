@@ -28,16 +28,6 @@ Connection: keep-alive
 ```
 ## Self hosting
 ### Production Environment(via traefik)
-Replace the value of FLASK_DEBUG.
-```
-# Copy .env_example as .env
-cp .env_example .env
-vi .env
-```
-```
-# Replace the value of FLASK_DEBUG to False in .env
-FLASK_DEBUG=False
-```
 Check the value of the HOST_DOMAIN environment variable for the host.
 ```
 printenv HOST_DOMAIN
@@ -48,34 +38,18 @@ docker network create traefik_reverse_proxy_network
 docker compose -f compose.traefik.yml up -d
 ```
 Go to `https://returncode.${HOST_DOMAIN}/[http_status_code]`, you will get a response containing the code you specified.  
+
+If you want to enable debug mode, change the environment variable `FLASK_DEBUG` in Dockerfile.
 ### Production Environment(Standalone)
-Replace the value of FLASK_DEBUG.
-```
-# Copy .env_example as .env
-cp .env_example .env
-vi .env
-```
-```
-# Replace the value of FLASK_DEBUG to False in .env
-FLASK_DEBUG=False
-```
 Start the container.
 ```
 docker compose -f compose.yml up -d
 ```
 Go to `http://host-ip:8000/[http_status_code]`, you will get a response containing the code you specified.  
+
+If you want to enable debug mode, change the environment variable `FLASK_DEBUG` in Dockerfile.  
 If you want to change the port number, change the value in Dockerfile and compose file.
 ### Development Environment
-Replace the value of FLASK_DEBUG.
-```
-# Copy .env_example as .env
-cp .env_example .env
-vi .env
-```
-```
-# Replace the value of FLASK_DEBUG to True in .env
-FLASK_DEBUG=True
-```
 Start the development server.
 ```
 rye run devserver

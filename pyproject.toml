@@ -20,7 +20,7 @@ dev-dependencies = [
 ]
 
 [tool.rye.scripts]
-devserver = { cmd = "flask --app src.return_http_status_code.application:app run", env-file = ".env" }
+devserver = { cmd = "flask --app src.return_http_status_code.application:app run", env = { FLASK_DEBUG="True" } }
 
 [tool.ruff]
 line-length = 119

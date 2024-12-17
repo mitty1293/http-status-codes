@@ -5,8 +5,6 @@ services:
             dockerfile: Dockerfile
         image: return_http_status_code
         container_name: return_http_status_code
-        env_file:
-            - .env
         ports:
             - "8000:8000"
         volumes:
